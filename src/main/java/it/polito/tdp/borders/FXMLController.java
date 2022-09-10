@@ -62,6 +62,11 @@ public class FXMLController {
 
 	@FXML
 	void doSimula(ActionEvent event) {
+		Country c = boxNazione.getValue();
+		int T = model.simula(c); // T = numero di passi
+		List<CountryAndNumber> stanziali = model.getCountryAndNumbers();
+		txtResult.setText(T + "\n");
+		txtResult.appendText(stanziali + "");
 
 	}
 
